@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E59DD572-308A-4054-A193-3E1941DA7E61}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ClubeDaLeitura.ConsoleApp1</RootNamespace>
+    <AssemblyName>ClubeDaLeitura.ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compartilhado\EntidadeBase.cs" />
+    <Compile Include="Compartilhado\RepositorioBase.cs" />
+    <Compile Include="Compartilhado\TelaBase.cs" />
+    <Compile Include="ModuloAmigo\Amigo.cs" />
+    <Compile Include="ModuloAmigo\RepositorioAmigo.cs" />
+    <Compile Include="ModuloAmigo\TelaAmigo.cs" />
+    <Compile Include="ModuloCaixa\Caixa.cs" />
+    <Compile Include="ModuloCaixa\RepositorioCaixa.cs" />
+    <Compile Include="ModuloCaixa\TelaCaixa.cs" />
+    <Compile Include="ModuloEmprestimo\Emprestimo.cs" />
+    <Compile Include="ModuloEmprestimo\RepositorioEmprestimo.cs" />
+    <Compile Include="ModuloEmprestimo\TelaEmprestimo.cs" />
+    <Compile Include="ModuloLivro\Livro.cs" />
+    <Compile Include="ModuloLivro\RepositorioLivro.cs" />
+    <Compile Include="ModuloLivro\TelaLivro.cs" />
+    <Compile Include="ModuloReserva\RepositorioReserva.cs" />
+    <Compile Include="ModuloReserva\Reserva.cs" />
+    <Compile Include="ModuloReserva\TelaReserva.cs" />
+    <Compile Include="ModuloRevista\RepositorioRevista.cs" />
+    <Compile Include="ModuloRevista\Revista.cs" />
+    <Compile Include="ModuloRevista\TelaRevista.cs" />
+    <Compile Include="TelaPrincipal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
